@@ -28,6 +28,19 @@
       margin-left: 5px;
     }
   }
+
+  .as__btn-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 10px;
+    color: #eee;
+
+    & > div {
+      width: 75px;
+      font-size: 1.1em;
+    }
+  }
 }
 
 .as__box {

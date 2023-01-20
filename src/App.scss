@@ -95,6 +95,13 @@
   }
 }
 
+.as__feedback {
+  margin-top: 20px;
+  text-align: center;
+  color: #eee;
+  font-size: 1.1em;
+}
+
 @media screen and (max-width: $sizePointMobile) {
   .as__box {
     grid-template-columns: $sizeMobileCell $sizeMobileCell $sizeMobileCell;

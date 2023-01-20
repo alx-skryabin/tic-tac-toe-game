@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Button, notification, Switch} from 'antd'
 import './App.scss'
 
+const fields = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 const victories = [
   [0, 1, 2],
   [3, 4, 5],
@@ -41,7 +42,7 @@ function App() {
   const [end, setEnd] = useState<boolean>(false)
   const [player, setPlayer] = useState<'o' | 'x'>('o')
   const [ai, setAi] = useState<boolean>(false)
-  const [initial, setInitial] = useState<string[]>(['1', '2', '3', '4', '5', '6', '7', '8', '9'])
+  const [initial, setInitial] = useState<string[]>(fields)
 
   const clickCell = (e: any) => {
     const number = e.target.dataset.item
@@ -60,14 +61,14 @@ function App() {
       if (!res) return
       setEnd(true)
       notify(res.toString())
+      return true
+    }).then((isFinish) => {
+      if (isFinish) return
+      if (ai) aiCell()
     })
-
-    if (ai) aiCell()
   }
 
   const aiCell = () => {
-    // if (end) return
-
     setTimeout(() => {
       const AI = getRandomCell(initial)
       if (Number.isInteger(AI)) {
@@ -135,6 +136,15 @@ function App() {
             return <div key={i} className={`as__box_item ${selectedClass}`} data-item={i}>{item}</div>
           })
         }
+      </div>
+
+      <div className="as__feedback">
+        <div>
+          Feedback? — <a href="https://vk.com/alx.skryabin" target="_blank">vk</a>
+        </div>
+        <div>
+          Improvements? — <a href="https://github.com/alx-skryabin/tic-tac-toe-game" target="_blank">github</a>
+        </div>
       </div>
     </div>
   )

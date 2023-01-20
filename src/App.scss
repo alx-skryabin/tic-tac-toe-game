@@ -1,0 +1,102 @@
+@import "styles/variables";
+
+.as__app {
+  width: 100%;
+  min-height: 100vh;
+  background: #223;
+}
+
+.as__player {
+  color: #eee;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 1.2em;
+
+  span {
+    color: yellow;
+    text-transform: uppercase;
+    font-size: 1.3em;
+  }
+}
+
+.as__control {
+  padding: 20px;
+  text-align: center;
+
+  .as__btn-reset {
+    span {
+      margin-left: 5px;
+    }
+  }
+}
+
+.as__box {
+  margin: auto;
+  background: #223;
+  display: grid;
+  grid-template-columns: $sizeCell $sizeCell $sizeCell;
+  grid-template-rows: $sizeCell $sizeCell $sizeCell;
+  gap: 5px;
+  width: $sizeBox;
+  height: $sizeBox;
+
+  &.as__box_disabled {
+    .as__box_item {
+      opacity: .5;
+      cursor: no-drop;
+    }
+  }
+}
+
+.as__box_item {
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  background: #444;
+  color: #eee;
+  font-size: 1.4em;
+  line-height: $sizeCell;
+  text-align: center;
+  cursor: pointer;
+  transition: $transition_02;
+
+  &:hover {
+    opacity: .8;
+    transition: $transition_02;
+  }
+
+  &.as__box_item-x,
+  &.as__box_item-o {
+    line-height: calc(#{$sizeCell} - 20px);
+    font-size: 5em;
+    cursor: no-drop;
+    opacity: 1;
+  }
+
+  &.as__box_item-x {
+    background: $playerO;
+  }
+
+  &.as__box_item-o {
+    background: $playerX;
+  }
+}
+
+@media screen and (max-width: $sizePointMobile) {
+  .as__box {
+    grid-template-columns: $sizeMobileCell $sizeMobileCell $sizeMobileCell;
+    grid-template-rows: $sizeMobileCell $sizeMobileCell $sizeMobileCell;
+    width: $sizeMobileBox;
+    height: $sizeMobileBox;
+  }
+
+  .as__box_item {
+    line-height: $sizeMobileCell;
+
+    &.as__box_item-x,
+    &.as__box_item-o {
+      line-height: calc(#{$sizeMobileCell} - 10px);;
+      font-size: 3em;
+    }
+  }
+}

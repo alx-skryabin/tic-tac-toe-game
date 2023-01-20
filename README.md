@@ -17,10 +17,19 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
+#### `npm deploy`
+
+Launch the deployment of the client part through the `firebase` service. <br />
+Demo link: [tic-tac-toe-as](https://tic-tac-toe-as.web.app/)
+
+1. Make commit
+2. npm run build
+3. npm run deploy
+
 
 ### Stack:
 
-`React` `TypeScript`  `Antd Design` `Sass` 
+`React` `TypeScript`  `Antd Design` `Sass` `firebase`
 
 ### Author:
 `Github:` [@alx-skryabin](https://github.com/alx-skryabin)

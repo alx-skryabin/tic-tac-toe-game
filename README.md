@@ -20,8 +20,7 @@ Your app is ready to be deployed!
 
 ### Stack:
 
-`React` `TypeScript` `Redux Toolkit` `Antd Design`<br />
-`Sass` `React Router` `Axios`
+`React` `TypeScript`  `Antd Design` `Sass` 
 
 ### Author:
 `Github:` [@alx-skryabin](https://github.com/alx-skryabin)

@@ -1,4 +1,6 @@
 # Tic Tac Toe Game
+- Two players
+- AI mode
 
 ### Available Scripts:
 

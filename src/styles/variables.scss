@@ -1,13 +1,15 @@
 //size
 $sizePointMobile: 650px;
-$sizeCell: 200px;
+$sizeCell: 150px;
 $sizeBox: calc(#{$sizeCell * 3} + 10px);
 $sizeMobileCell: 80px;
 $sizeMobileBox: calc(#{$sizeMobileCell * 3} + 10px);
 
 //color
-$playerO: #ee541a;
-$playerX: #2254b1;
+$playerO: linear-gradient(200deg, rgba(254, 37, 37, .8) 0%, rgba(255, 0, 185, .8) 100%);
+$playerX: linear-gradient(200deg, rgba(37, 172, 254, .8) 0%, rgba(0, 31, 255, .8) 100%);
+//$playerO: #ee541a;
+//$playerX: #2254b1;
 
 //shadow
 $shadowBoxLite: 0 .75rem 1.5rem rgba(0, 0, 0, .1);
